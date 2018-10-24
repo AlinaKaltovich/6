@@ -27,7 +27,7 @@ for(let i=0; i<arr.length; i+=1){
 */
 
 
-
+/*
 let arr = prompt ('Введите текст' ['']);
 
 
@@ -35,9 +35,29 @@ for (let i = 0; i < arr.length; i+=1);
 
 var elem = arr.pop();
 {console.info (last);}
+
+
+
+
 /*
 {
     console.info (arr.length);
 }
 */
+/*
+let arr = prompt ('Введите число');
+var c = [];
+for (var i=0; i<arr.length; i+=1);{
+if ( i/2
+  )
 
+
+
+}*/
+
+var tablist = Document.querySelector ('.item');
+var tab = Document.querySelector ('.menu');
+tad.addEventListener ('click', 
+    function (event) {event.target
+    HTMLDataListElement.indexof(event.target)
+;})
