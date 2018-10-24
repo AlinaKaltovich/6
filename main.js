@@ -9,11 +9,13 @@ if (userPassword===originPassword){
     alert('wrong password');
 }
 
-let a=1 
-let b=2
-{
-alert(a+b);
-}
+*/
+
+/*
+let task1 = parseInt (prompt ('Введите первую цифру' , ''));
+let task2 = parseInt (prompt ('Введите вторую цифру' , ''));
+
+alert(task1 + task2);
 */
 
 //масив
@@ -23,14 +25,19 @@ for(let i=0; i<arr.length; i+=1){
     console.info (arr[i]+1);
 }
 */
-let userTesk=prompt ('Введите текст');
 
 
 
-function eat(arr) {
-    arr.pop();
-  }
-let arr=[prompt]
+let arr = prompt ('Введите текст' ['']);
 
- 
-console.log (arr.length);
+
+for (let i = 0; i < arr.length; i+=1);
+
+var elem = arr.pop();
+{console.info (last);}
+/*
+{
+    console.info (arr.length);
+}
+*/
+
