@@ -125,3 +125,123 @@ function visiblSubitem() {
 // DOMContentLoaded
 // querySelector
 // classList
+
+
+//L3
+
+// Индекс массы тела
+
+
+// var massa = prompt('Enter your weight');
+// var height = prompt('Enter your heigh');
+
+// console.log(massa, height);
+
+// var r = massa/(height*height);
+// console.log(r);
+
+// if (r<=16){
+//     alert ('Выраженный дефицит массы тела'); 
+// }
+// else if (r>18.5){
+//     alert ('Недостаточная (дефицит) масса тела');
+// }
+// else if (r>24.99){
+//     alert ('Норма');
+// }
+// else if (r>30){
+//     alert ('Избыточная масса тела (предожирение)');
+// }
+// else if (r>35){
+//     alert ('Ожирение');
+// }
+// else if (r>40){
+//     alert ('Ожирение резкое');
+// }
+// else {
+//     alert ('Очень резкое ожирение');
+// }
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', f1);
+
+function f1(){
+    var btnRes = document.querySelector ('#btn-res');
+
+
+    btnRes.addEventListener ('click', f2);
+    function f2(){
+        var mas = document.querySelector ('#width').value;
+        var h = document.querySelector ('#height').value;
+    
+    console.log(mas);
+    
+    var r = mas/(h*h);
+    console.log(r);
+    }
+
+    
+}
+
+
+
+    
+
+    
+       
+
+    
+
+
+
+
+
+
+// link.addEventListener ('click', function (e){
+//     event.preventDefault();
+// })
+
+// var r = mas/(h*h);
+
+/*var w, h, res, r;
+r = document.querySelector ('r');
+
+document.querySelector('res').onclick = f1();
+
+//require
+
+
+ocument.addEventListener('DOMContentLoaded', f1);
+
+
+function f1(){
+    w = document.querySelector ('#width').value;
+    h = document.querySelector ('#height').value;
+    var a = h*h/w;
+}
+
+n = f1();
+
+if (n <= 16){
+    r.innerHTML = 'дефицит';
+}
+else if (n )
+
+// */
+
+
+// function init(){
+//     f1
+//     f2
+//     f3
+// }
+
+// document.addEventListener('DOMContentLoaded', init);
+
+
+// btn.addEventListener('click', function f2());
+// var massEl.value;
