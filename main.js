@@ -46,18 +46,82 @@ var elem = arr.pop();
 */
 /*
 let arr = prompt ('Введите число');
-var c = [];
-for (var i=0; i<arr.length; i+=1);{
-if ( i/2
-  )
+for (var i=0; i<arr.length; i+=1);
+
+arr.join ();
+alert (arr.lenght);
 
 
 
 }*/
 
-var tablist = Document.querySelector ('.item');
-var tab = Document.querySelector ('.menu');
-tad.addEventListener ('click', 
-    function (event) {event.target
-    HTMLDataListElement.indexof(event.target)
-;})
+
+
+// var tablist = document.querySelectorAll ('.item');
+// var tab = document.querySelector ('.menu');
+// console.log (tablist, tab);
+
+
+
+// for (var i=0; i<tablist.length; i++){
+//     tablist[i].onclick = active;
+// }
+//     function active(){
+//       this.classList.add('active');  
+//     }
+
+
+
+    // function act() {
+    // tablist[i].classList.add('active');
+    // }
+
+// tad.addEventListener ('click', 
+//     function (event) {event.target
+//     HTMLDataListElement.indexof(event.target)
+// ;})
+
+
+var item, subitem;
+
+window.onload = function(){
+    item = document.getElementsByClassName('item');
+    subitem = document.getElementsByClassName('subitem');
+    hidenSubitem();
+}
+
+function hidenSubitem() {
+    for (var i=0; i<subitem.length; i++){
+        subitem[i].classList.remove('active');
+        subitem[i].classList.add('hidden');    
+    }
+}
+
+document.getElementsByClassName('wrap').onclick = function(event){
+    var target = event.target;
+
+    if(target.className == 'item'){
+        for (var i=0; i<item.length; i++){
+            if(target == item [i]) {
+                visiblSubitem(i);
+                break;
+            }
+        }
+    }
+}
+function visiblSubitem() {
+    if(subitem[i].classList.contains('active')){
+        hidenSubitem(0);
+        subitem[i].classList.remove('hidden');
+        subitem[i].classList.add('active');
+
+    }
+}
+
+
+
+
+// document.addEventLinstenr
+// DOMContentLoaded
+// querySelector
+// classList
