@@ -82,43 +82,78 @@ alert (arr.lenght);
 // ;})
 
 
-var item, subitem;
+// var item, subitem;
 
-window.onload = function(){
-    item = document.getElementsByClassName('item');
-    subitem = document.getElementsByClassName('subitem');
-    hidenSubitem();
-}
+// window.onload = function(){
+//     item = document.getElementsByClassName('item');
+//     subitem = document.getElementsByClassName('subitem');
+//     hidenSubitem();
+// }
 
-function hidenSubitem() {
-    for (var i=0; i<subitem.length; i++){
-        subitem[i].classList.remove('active');
-        subitem[i].classList.add('hidden');    
+// function hidenSubitem() {
+//     for (var i=0; i<subitem.length; i++){
+//         subitem[i].classList.remove('active');
+//         subitem[i].classList.add('hidden');    
+//     }
+// }
+
+// document.getElementsByClassName('wrap').onclick = function(event){
+//     var target = event.target;
+
+//     if(target.className == 'item'){
+//         for (var i=0; i<item.length; i++){
+//             if(target == item [i]) {
+//                 visiblSubitem(i);
+//                 break;
+//             }
+//         }
+//     }
+// }
+// function visiblSubitem() {
+//     if(subitem[i].classList.contains('active')){
+//         hidenSubitem(0);
+//         subitem[i].classList.remove('hidden');
+//         subitem[i].classList.add('active');
+
+//     }
+// }
+
+
+document.addEventListener('DOMContentLoaded', f1);
+
+    function f1 (){
+    var wrap = document.querySelector ('.wrap');
+    wrap.addEventListener ('click', f2);
+
+    function f2(){
+        
     }
-}
 
-document.getElementsByClassName('wrap').onclick = function(event){
-    var target = event.target;
+    
+    var item = document.querySelector ('.item');
+    var subitem = document.querySelector ('.subitem');
+   
+    var len = item.classList.length;
 
-    if(target.className == 'item'){
-        for (var i=0; i<item.length; i++){
-            if(target == item [i]) {
-                visiblSubitem(i);
-                break;
-            }
-        }
+    console.log (len);
+        
+    //     for (var i=0; i<subitem.length; i++){
+    //         subitem[i] = classList.remove('active');
+    //         subitem[i].classList.add('hidden');    
+    //     }
+    // }
+
+
+
+    item.addEventListener ('click', f32);
+
+    function f3(){
+
     }
-}
-function visiblSubitem() {
-    if(subitem[i].classList.contains('active')){
-        hidenSubitem(0);
-        subitem[i].classList.remove('hidden');
-        subitem[i].classList.add('active');
-
-    }
-}
 
 
+
+// }
 
 
 // document.addEventLinstenr
@@ -133,7 +168,10 @@ function visiblSubitem() {
 
 
 // var massa = prompt('Enter your weight');
+// massa = parseInt (massa);
 // var height = prompt('Enter your heigh');
+// height = parseInt (height);
+
 
 // console.log(massa, height);
 
@@ -172,66 +210,43 @@ document.addEventListener('DOMContentLoaded', f1);
 function f1(){
     var btnRes = document.querySelector ('#btn-res');
 
-
     btnRes.addEventListener ('click', f2);
+    
     function f2(){
         var mas = document.querySelector ('#width').value;
+        mas = parseInt (mas);
         var h = document.querySelector ('#height').value;
-    
-    console.log(mas);
-    
-    var r = mas/(h*h);
-    console.log(r);
+        h = parseInt (h);
+        var recomend = document.querySelector ('#recomend');
+        var r = mas/(h*h);
+        var rec
+        console.log(r);
+
+        if (r<=16){
+            rec = 'Выраженный дефицит массы тела';
+        }
+        else if (r>=18.5){
+            rec = 'Недостаточная (дефицит) масса тела';
+        }
+        else if (r>=24.99){
+            rec = 'Норма';
+        }
+        else if (r>=30){
+            rec = 'Избыточная масса тела (предожирение)';
+        }
+        else if (r>=35){
+            rec = 'Ожирение';
+        }
+        else if (r>=40){
+            rec = 'Ожирение резкое';
+        }
+        else {
+            rec = 'Очень резкое ожирение';
+        }
+
+        recomend.innerHTML = rec;    
     }
-
-    
 }
-
-
-
-    
-
-    
-       
-
-    
-
-
-
-
-
-
-// link.addEventListener ('click', function (e){
-//     event.preventDefault();
-// })
-
-// var r = mas/(h*h);
-
-/*var w, h, res, r;
-r = document.querySelector ('r');
-
-document.querySelector('res').onclick = f1();
-
-//require
-
-
-ocument.addEventListener('DOMContentLoaded', f1);
-
-
-function f1(){
-    w = document.querySelector ('#width').value;
-    h = document.querySelector ('#height').value;
-    var a = h*h/w;
-}
-
-n = f1();
-
-if (n <= 16){
-    r.innerHTML = 'дефицит';
-}
-else if (n )
-
-// */
 
 
 // function init(){
@@ -241,7 +256,3 @@ else if (n )
 // }
 
 // document.addEventListener('DOMContentLoaded', init);
-
-
-// btn.addEventListener('click', function f2());
-// var massEl.value;
