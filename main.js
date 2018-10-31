@@ -119,37 +119,37 @@ alert (arr.lenght);
 // }
 
 
-document.addEventListener('DOMContentLoaded', f1);
+// document.addEventListener('DOMContentLoaded', f1);
 
-    function f1 (){
-    var wrap = document.querySelector ('.wrap');
-    wrap.addEventListener ('click', f2);
+//     function f1 (){
+//     var wrap = document.querySelector ('.wrap');
+//     wrap.addEventListener ('click', f2);
 
-    function f2(){
+//     function f2(){
         
-    }
+//     }
 
     
-    var item = document.querySelector ('.item');
-    var subitem = document.querySelector ('.subitem');
+//     var item = document.querySelector ('.item');
+//     var subitem = document.querySelector ('.subitem');
    
-    var len = item.classList.length;
+//     var len = item.classList.length;
 
-    console.log (len);
+//     console.log (len);
         
-    //     for (var i=0; i<subitem.length; i++){
-    //         subitem[i] = classList.remove('active');
-    //         subitem[i].classList.add('hidden');    
-    //     }
-    // }
+//     //     for (var i=0; i<subitem.length; i++){
+//     //         subitem[i] = classList.remove('active');
+//     //         subitem[i].classList.add('hidden');    
+//     //     }
+//     // }
 
 
 
-    item.addEventListener ('click', f32);
+//     item.addEventListener ('click', f32);
 
-    function f3(){
+//     function f3(){
 
-    }
+//     }
 
 
 
@@ -205,48 +205,101 @@ document.addEventListener('DOMContentLoaded', f1);
 
 
 
-document.addEventListener('DOMContentLoaded', f1);
+// document.addEventListener('DOMContentLoaded', f1);
 
-function f1(){
-    var btnRes = document.querySelector ('#btn-res');
+// function f1(){
+//     var btnRes = document.querySelector ('#btn-res');
 
-    btnRes.addEventListener ('click', f2);
+//     btnRes.addEventListener ('click', f2);
     
-    function f2(){
-        var mas = document.querySelector ('#width').value;
-        mas = parseInt (mas);
-        var h = document.querySelector ('#height').value;
-        h = parseInt (h);
-        var recomend = document.querySelector ('#recomend');
-        var r = mas/(h*h);
-        var rec
-        console.log(r);
+//     function f2(){
+//         var mas = document.querySelector ('#width').value;
+//         mas = parseInt (mas);
+//         var h = document.querySelector ('#height').value;
+//         h = parseInt (h);
+//         var recomend = document.querySelector ('#recomend');
+//         var r = mas/(h*h);
+//         var rec
+//         console.log(r);
 
-        if (r<=16){
-            rec = 'Выраженный дефицит массы тела';
-        }
-        else if (r>=18.5){
-            rec = 'Недостаточная (дефицит) масса тела';
-        }
-        else if (r>=24.99){
-            rec = 'Норма';
-        }
-        else if (r>=30){
-            rec = 'Избыточная масса тела (предожирение)';
-        }
-        else if (r>=35){
-            rec = 'Ожирение';
-        }
-        else if (r>=40){
-            rec = 'Ожирение резкое';
-        }
-        else {
-            rec = 'Очень резкое ожирение';
-        }
+//         if (r<=16){
+//             rec = 'Выраженный дефицит массы тела';
+//         }
+//         else if (r>=18.5){
+//             rec = 'Недостаточная (дефицит) масса тела';
+//         }
+//         else if (r>=24.99){
+//             rec = 'Норма';
+//         }
+//         else if (r>=30){
+//             rec = 'Избыточная масса тела (предожирение)';
+//         }
+//         else if (r>=35){
+//             rec = 'Ожирение';
+//         }
+//         else if (r>=40){
+//             rec = 'Ожирение резкое';
+//         }
+//         else {
+//             rec = 'Очень резкое ожирение';
+//         }
 
-        recomend.innerHTML = rec;    
-    }
+//         recomend.innerHTML = rec;    
+//     }
+// }
+
+// Lesson 3
+
+// var user1 = {
+//     "name" : "A",
+
+// };
+
+// var user2 = {
+//     "name" : "D",
+    
+// };
+
+// var user3 = {
+//     "name" : "N",
+    
+// };
+
+// var user4 = {
+//     "name" : "S",
+    
+// };
+
+// var us = [user1, user2, user3, user4];
+
+// for(var i=0; i<us.length; i++){
+//     us.sort(user.name);
+//     console.log (user);
+// }
+
+
+var b = [];
+var a = [0, 2, 5, 7, 3, 2, 5, 5, 6];
+
+for(var i=0; i<a.length; i++){
+
+   if (b.indexOf( a[i] ) == -1){
+       b.push(a[i]);
+   }
 }
+console.log (b);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // function init(){
@@ -255,4 +308,4 @@ function f1(){
 //     f3
 // }
 
-// document.addEventListener('DOMContentLoaded', init);
+// document.addEventListener('DOMContentLoaded', init){}
