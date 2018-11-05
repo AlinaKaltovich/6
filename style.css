@@ -2,9 +2,7 @@
     display: flex;
 }
 .item{
-    text-align: center;
-    width: 200px;
-    background: rgb(245, 200, 200);
+    
 }
 .hidden{
     display: none;
@@ -12,3 +10,17 @@
 .active{
     display: block;
 }
+
+
+.menu{
+    display: flex;
+}
+.m-item{
+    list-style: none;
+    text-align: center;
+    padding: 15px 30px;
+    background: rgb(245, 200, 200);
+    margin: 10px;
+}
+.m-item:hover{
+    background: #c97373;

@@ -263,24 +263,65 @@ alert (arr.lenght);
 // }
 
 
-var b = [];
-var a = [0, 2, 5, 7, 3, 2, 5, 5, 6];
+// var b = [];
+// var a = [0, 2, 5, 7, 3, 2, 5, 5, 6];
 
-for(var i=0; i<a.length; i++){
+// for(var i=0; i<a.length; i++){
 
-   if (b.indexOf( a[i] ) == -1){
-       b.push(a[i]);
-   }
-}
-console.log (b);
-
-
+//    if (b.indexOf( a[i] ) == -1){
+//        b.push(a[i]);
+//    }
+// }
+// console.log (b);
 
 
 
 
+// var numNewEl = prompt ('Введите количество пунктом меню');
+// numNewEl = parseInt (numNewEl);
+
+var numNewEl = 5;
+
+var ul = document.createElement('ul');
+
+    ul.classList.add('menu'); 
 
 
+
+    var title = document.createElement ('h2');
+    title.innerText = 'Введите количество пунктом меню: ';
+    title.style = 'color: #6939ee';
+    document.body.appendChild(title);
+
+    var input = document.createElement ('input');
+    document.body.appendChild(input);
+
+    var btn = document.createElement ('button');
+    btn.innerText = 'Создать';
+    document.body.appendChild(btn);
+
+    document.body.appendChild(ul);
+
+    btn.addEventListener ('click', function() {
+        createList(+input.value);
+    });
+
+
+function createList(n) {
+    for (var i=0; i<n; i++){
+        var li = document.createElement('li');
+        ul.appendChild(li);
+        li.classList.add('m-item');
+    
+        var link = document.createElement('a');
+        link.innerText = 'Item';
+        li.appendChild(link); 
+        link.classList.add('item-link');   
+    }
+}   
+
+
+ 
 
 
 
