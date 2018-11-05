@@ -121,38 +121,23 @@ alert (arr.lenght);
 
 // document.addEventListener('DOMContentLoaded', f1);
 
-//     function f1 (){
-//     var wrap = document.querySelector ('.wrap');
-//     wrap.addEventListener ('click', f2);
+// function f1(){
 
-//     function f2(){
-        
-//     }
+// var wrap = document.querySelector ('.wrap');
+// var item = document.querySelectorAll ('.item');
+// var subitem = document.querySelectorAll ('.subitem');
 
-    
-//     var item = document.querySelector ('.item');
-//     var subitem = document.querySelector ('.subitem');
-   
-//     var len = item.classList.length;
+// var show = function () {
+//     subitem.classList.remove('.hidden');
+//     subitem.classList.add('.ative');
+// }
 
-//     console.log (len);
-        
-//     //     for (var i=0; i<subitem.length; i++){
-//     //         subitem[i] = classList.remove('active');
-//     //         subitem[i].classList.add('hidden');    
-//     //     }
-//     // }
+// item.addEventListener('click', function (evt) {
+//     show();
+// })
 
 
-
-//     item.addEventListener ('click', f32);
-
-//     function f3(){
-
-//     }
-
-
-
+// console.log(subitem);
 // }
 
 
