@@ -1,8 +1,112 @@
+/* Календарь */
+.calendar{
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 330px;
+    background: #474747;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.time{
+    font: 100 44px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 0;
+    padding-left: 10px;
+}
+.date{
+    margin: 0;
+    padding: 0 0 20px 10px;
+    color: #0B7E43;
+}
+
+.nav{
+    position: relative;
+    padding: 15px 0;
+    border-top: 1px solid #6d6c6c;
+}
+.nav::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    transform: rotate(-45deg);
+    right: 38px;
+}
+.nav-arrow{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    transform: rotate(135deg);
+    right: 82px;
+    top: 23px;
+}
+
+.day-wrap{
+    display: flex;
+    
+}
+.day{
+    width: 40px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.month{
+    display: flex;
+    flex-direction: column;
+}
+
+.weekday{
+    display: flex;
+}
+
+
+.number{
+    width: 40px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.now{
+    border: 2px solid #000000;
+    background: #0B7E43;
+    outline: 2px solid #0B7E43;
+    border-radius: 4px;
+}
+
+.today{
+    border-top: 1px solid #6d6c6c;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+
+
+
+
+
+
+
 .wrap{
     display: flex;
 }
 .item{
-    
+    text-align: center;
+    width: 200px;
+    background: rgb(245, 200, 200);
+    margin: 10px;
 }
 .hidden{
     display: none;
@@ -10,6 +114,9 @@
 .active{
     display: block;
 }
+
+
+
 
 
 .menu{
@@ -21,6 +128,20 @@
     padding: 15px 30px;
     background: rgb(245, 200, 200);
     margin: 10px;
+    position: relative;
 }
 .m-item:hover{
-    background: #c97373;
+    background: #b39beb;
+}
+
+.btn-remove{
+    color: #524c4c;
+    font: bold 12px Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+.btn-remove:hover{
+    color: #8d0808;
+     cursor: pointer;
+}

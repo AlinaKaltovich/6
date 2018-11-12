@@ -1,3 +1,131 @@
+// http://code.mu/javascript
+// https://developer.mozilla.org/ru/docs/Web/html/Element/input/radio
+
+
+
+
+// Календарь
+
+  
+
+var calendar = function calendar(){
+    function calTime() {
+        var date = new Date(); 
+        var time = document.querySelector ('.time');
+        time.innerText = date.toLocaleTimeString() + '  pm';
+
+        setTimeout (calTime, 1000);
+    };
+
+    function calDateNow() {
+        var date = new Date(); 
+        var dateNow = document.querySelector ('.date');
+        dateNow.innerText = date.toDateString();
+    };
+
+    function monthNow() {
+        var date = new Date(); 
+        var monthNow = document.querySelector ('.nav');
+        monthNow.innerText = date.toLocaleString('en', {month: 'long'}) + ' ' + date.toLocaleString('en', {year: 'numeric'});
+    };
+        
+    function numberStart() {
+        
+        var number = document.querySelectorAll ('.number');
+        
+        for (i=0; i<number.lenght; i++){
+        var date = new Date();        
+        number[i].innerText = date.getDate();
+            
+        }
+        console.log (number);
+    };
+
+
+
+
+calTime();
+calDateNow();
+monthNow();
+numberStart();
+};
+// calendar();
+// var nav = document.querySelector ('.nav');
+
+
+
+// const arrDay = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+// //Слайдер с кнопкой
+
+// // document.getElementById('next').onclick = sliderBtn;
+// // var next=0;
+
+// // function sliderBtn(){
+// //     var wrapper = document.getElementById('wrapper');
+// //     next = next - 150;
+
+// //     if (next < -300){
+// //         next = 0;
+// //     }
+// //     wrapper.style.left = next + 'px';
+   
+// // }
+
+document.addEventListener('DOMContentLoaded', calendar());
+
+
+
+
+
+
+function show(){
+
+var wrap = document.querySelector ('.wrap');
+var item = document.querySelectorAll ('.item');
+var title = document.querySelectorAll ('.item-h');
+var subitem = document.querySelectorAll ('.subitem');
+console.log(subitem);
+
+
+    wrap.addEventListener ('click', function(evt){
+        // var i = [...item].indexOf(evt.target);
+
+        item = evt.target;
+        
+        for (let i=0; i<item.length; i++){
+            subitem [i].classList.remove("active");    
+            subitem [i].classList.add("hidden");    
+        }
+
+        subitem [i].classList.remove("hidden");
+        subitem [i].classList.add("ative");
+        
+    });
+
+};
+
+document.addEventListener('DOMContentLoaded', show());
+// wrap.addEventListener ('click', f2, false);
+
+// function f2(e){
+    
+//     for (var i=0; i<subitem.length; i++){
+        
+//         if (item == EventTarget){
+//         subitem.classList.remove(".hidden");
+//         subitem.classList.add(".ative");   
+      
+//     }
+//         }
+
+//     }
+
+
+// }
+
+
+
+
 /*https://learn.javascript.ru/array*/
 
 /*var userPassword=prompt('Введите пороль');
@@ -286,7 +414,7 @@ var ul = document.createElement('ul');
 
     ul.classList.add('menu'); 
 
-
+    
 
     var title = document.createElement ('h2');
     title.innerText = 'Введите количество пунктом меню: ';
@@ -300,26 +428,67 @@ var ul = document.createElement('ul');
     btn.innerText = 'Создать';
     document.body.appendChild(btn);
 
+    var btnClear = document.createElement ('button');
+    btnClear.innerText = 'Очистить';
+    document.body.appendChild(btnClear);
+
     document.body.appendChild(ul);
 
     btn.addEventListener ('click', function() {
         createList(+input.value);
     });
 
+    btnClear.addEventListener ('click', function() {
+        ul.remove();
+    });
 
 function createList(n) {
     for (var i=0; i<n; i++){
+        
         var li = document.createElement('li');
-        ul.appendChild(li);
         li.classList.add('m-item');
-    
+        ul.appendChild(li);
+        
         var link = document.createElement('a');
+        link.classList.add('item-link');
         link.innerText = 'Item';
         li.appendChild(link); 
-        link.classList.add('item-link');   
+
+
+        var btnRemove = document.createElement ('span');
+        btnRemove.classList.add('btn-remove');
+        btnRemove.innerText = 'x';
+        li.appendChild(btnRemove);
+        
+        btnRemove.addEventListener ('click', function(e) {
+            // var i = [...li].indexOf(e.target);
+                ul.removeChild (li);
+
+
+
+            // for(var i=0; i<li.length; i++){
+
+            // if (btnRemove.indexOf( li[i] ) == true){
+            //     ul.removeChild (li);
+            // }
+            // }
+
+
+
+        });
+        
+
     }
+
+
 }   
 
+
+    
+ 
+    // btnClear.addEventListener ('click', function() {
+    //     ul.removeChild (li);
+    // });
 
  
 
@@ -335,3 +504,5 @@ function createList(n) {
 // }
 
 // document.addEventListener('DOMContentLoaded', init){}
+
+
