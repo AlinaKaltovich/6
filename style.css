@@ -145,3 +145,26 @@
     color: #8d0808;
      cursor: pointer;
 }
+
+
+
+.search-form{
+    position: relative;
+}
+.search{
+    width: 300px;
+    background: #d4d4d4;
+    padding: 50px;
+    margin: 0 auto;
+}
+.choice{
+    position: absolute;
+    width: 170px;
+    height: 200px;
+    border: 1px solid #6d6c6c;
+    border-top: none; 
+    list-style: none;
+}
+.choice-hidden{
+    display: none;
+}
