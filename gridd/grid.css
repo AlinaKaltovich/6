@@ -1,0 +1,28 @@
+.wrapper{
+   
+    display: grid;
+    grid-template-areas: "x y y y y"
+                        "x m m m w"
+                        "x m m m w"
+                         "x z z z z";  
+}
+.wr{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+}
+.it{
+    border: 1px solid red;
+    height: 200px;;
+
+}
+.item{
+    border: 1px solid #000000;
+}
+.logo{
+    border: 1px solid #000000;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    align-self: center;
+}

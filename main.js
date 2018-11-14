@@ -36,7 +36,8 @@ var calendar = function calendar(){
         for (i=0; i<number.lenght; i++){
         var date = new Date();        
         number[i].innerText = date.getDate();
-            
+        
+        number.pop();
         }
         console.log (number);
     };
@@ -89,7 +90,7 @@ console.log(subitem);
 
     wrap.addEventListener ('click', function(evt){
 
-        if(item = evt.target){};
+        //if(item.indexOf(event){};
         
         for (let i=0; i<item.length; i++){
             subitem [i].classList.remove("active");    
@@ -125,7 +126,7 @@ document.addEventListener('DOMContentLoaded', show());
 
 
 
-/*https://learn.javascript.ru/array*/
+/* https://learn.javascript.ru/array*/
 
 /*var userPassword=prompt('Введите пороль');
 const originPassword='12345';
@@ -438,6 +439,7 @@ function createList(n) {
 
 
             for(let i=0; i<li.length; i++){
+                
 
             if (li[i].evt){
                 ul.removeChild (li);
@@ -477,7 +479,7 @@ function createList(n) {
 // document.addEventListener('DOMContentLoaded', init){}
 
 
-var searchDiv = document.querySelector('.search');
+/*var searchDiv = document.querySelector('.search');
 var search = document.querySelector('.search-input');
 var searchBtn = document.querySelector('.search-btn');
 var resultsWrap = document.querySelector('.search-form');
@@ -521,4 +523,68 @@ function creatResultList(res){
     
 }
 
-console.log(evt);
+console.log(evt);*/
+
+var mistake = document.querySelector('.err');
+var regForm = document.querySelector('#reg');
+var arrMist;
+var regSubmit = document.querySelector('#reg-bth');
+var regReset = document.querySelector('#reset');
+
+var regName = document.querySelector('#reg-name');
+var regMail = document.querySelector('#reg-mail');
+var regPass = document.querySelector('#reg-pass');
+var regRepeatPass = document.querySelector('#reg-repeat-pass');
+
+
+
+    // regSubmit.addEventListener('click', function(e){
+
+regForm.addEventListener('click', function(e){
+    e.preventDefault();
+       
+    if (e.target.tagName ==='BUTTON' && e.target.getAttribute('id') === 'reg-bth'){
+
+        if (regName.hasAttribute('required') && (regName.value === '')) {
+            mistake.innerText = 'Не заполненно поле Name';
+        }
+
+        if (regName.hasAttribute('pattern')) {
+            var pattern = regName.getAttribute('pattern');
+            var reg = new RegExp(pattern);
+            if (!reg.test(regName.value)){
+                mistake.innerText = 'Не верно заполнено поле Name';
+            }
+        }
+
+        if (regMail.hasAttribute('required') && regMail.value === ''){
+            mistake.innerText = 'Не заполненно поле e-mail';
+        }
+
+        if (regMail.hasAttribute('pattern')) {
+            var pattern = regMail.getAttribute('pattern');
+            var reg = new RegExp(pattern);
+            if (!reg.test(regMail.value.toUpperCase())){
+                mistake.innerText = 'Не верно заполнено поле Email';
+            }
+        }
+
+        if (regPass.hasAttribute('required') && regPass.value === '') {
+            mistake.innerText = 'Не заполненно поле Password';
+        }
+
+        if (regPass.value !== regRepeatPass.value){
+            mistake.innerText = 'Не соответствует';
+
+        }
+
+
+
+    } else if (e.target.tagName === 'BUTTON' && e.target.getAttribute('id') === 'reset') {}
+          
+
+    });
+
+
+
+

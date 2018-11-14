@@ -132,7 +132,24 @@
         </form>
         <div class="search-res"></div>
     </div> 
-    
+   
+    <h2>Формы</h2>
+    <div class="err"></div>
+    <form action="" id="reg">
+        <input type="text" id="reg-name" placeholder="Name" required pattern="[a-z A-Z]">
+        <input type="text" id="reg-mail" placeholder="e-mail" required pattern="[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}">
+        <input type="password" id="reg-pass" placeholder="password" required>
+        <input type="password" id="reg-repeat-pass" placeholder="repeat your password" required>
+        <input list="gender" id="genderr" placeholder="gender">
+        <datalist id="gender">
+            <option value="female">female</option>
+            <option value="male">male</option>
+        </datalist>
+        <input type="button" id="reg-bth" value="Submit">
+        <input type="reset" id="reset">
+    </form>
+
+
     
     <script src='main.js'></script>
 </body>
