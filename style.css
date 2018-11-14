@@ -121,6 +121,7 @@
 
 .menu{
     display: flex;
+    margin-bottom: 30px;
 }
 .m-item{
     list-style: none;
@@ -159,12 +160,14 @@
 }
 .choice{
     position: absolute;
-    width: 170px;
+    width: 131px;
     height: 200px;
-    border: 1px solid #6d6c6c;
-    border-top: none; 
+    top: 2px;
+    left: 1px;
     list-style: none;
+    background: #ffffff;
 }
-.choice-hidden{
-    display: none;
+.choice-link:hover{
+    cursor: pointer;
+    color: #584df0;
 }

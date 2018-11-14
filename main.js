@@ -381,8 +381,6 @@ alert (arr.lenght);
 // var numNewEl = prompt ('Введите количество пунктом меню');
 // numNewEl = parseInt (numNewEl);
 
-var numNewEl = 5;
-
 var ul = document.createElement('ul');
 
     ul.classList.add('menu'); 
@@ -416,7 +414,7 @@ var ul = document.createElement('ul');
     });
 
 function createList(n) {
-    for (var i=0; i<n; i++){
+    for (let i=0; i<n; i++){
         
         var li = document.createElement('li');
         li.classList.add('m-item');
@@ -433,18 +431,18 @@ function createList(n) {
         btnRemove.innerText = 'x';
         li.appendChild(btnRemove);
         
-        btnRemove.addEventListener ('click', function(e) {
-            // var i = [...li].indexOf(e.target);
+        btnRemove.addEventListener ('click', function(evt) {
+            // let i = [...li].indexOf(e.target);
                 ul.removeChild (li);
 
 
 
-            // for(var i=0; i<li.length; i++){
+            for(let i=0; i<li.length; i++){
 
-            // if (btnRemove.indexOf( li[i] ) == true){
-            //     ul.removeChild (li);
-            // }
-            // }
+            if (li[i].evt){
+                ul.removeChild (li);
+            }
+            }
 
 
 
@@ -499,7 +497,7 @@ function drowResalts(search){
 search.addEventListener('keyup', function(){
     results = [];
 
-    for (i=0; i<arrArr.length; i++){
+    for (let i=0; i<arrArr.length; i++){
         if (arrArr[i].includes(search.value)){
             results.push(arrArr[i]);
         }
@@ -511,12 +509,16 @@ function creatResultList(res){
     var ul = document.createElement('ul');
     ul.classList.add('choice');
 
-    for (var i=0; i<res.length; i++){
+    for (let i=0; i<res.length; i++){
         var li = document.createElement('li');
-        li.innerText = res[i];
+        li.classList.add('choice-link');
         ul.appendChild(li);
+        li.innerText = res[i];
+       
     }
 
-    document.body.appendChild(ul);
+    resultsWrap.appendChild(ul); 
+    
 }
 
+console.log(evt);
