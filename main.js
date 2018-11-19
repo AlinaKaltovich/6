@@ -443,7 +443,6 @@ function formReg(){
 
     var mistakeItem = document.querySelectorAll('.err-item');
     var regForm = document.querySelector('#reg');
-    // var arrMist;
     var regSubmit = document.querySelector('#reg-btn');
     var regReset = document.querySelector('#reset');
 
@@ -458,41 +457,39 @@ function formReg(){
     // regForm.addEventListener('click', function(e){
         e.preventDefault();
        
-  
-
         // if (e.target.tagName ==='BUTTON' && e.target.getAttribute('id') === 'reg-btn'){
  
-            // if (regName.hasAttribute('required') && (regName.value === '')) {
-            //    let errItem = document.createElement('li');
-            //     errItem.classList.add('err-item');
-            //     mistake.appendChild(errItem); 
-            //    errItem.innerText = 'Не заполнено поле Name.';
-            // } else if (regName.hasAttribute('pattern')) {
-            //         var pattern = regName.getAttribute('pattern');
-            //         var reg = new RegExp(pattern);
-            //         if (!reg.test(regName.value)){
-            //             let errItem = document.createElement('li');
-            //             errItem.classList.add('err-item');
-            //             mistake.appendChild(errItem); 
-            //             errItem.innerText = 'Не верно заполнено поле Name.';
-            //         }
-            // }
+            if (regName.hasAttribute('required') && (regName.value === '')) {
+               let errItem = document.createElement('li');
+                errItem.classList.add('err-item');
+                mistake.appendChild(errItem); 
+               errItem.innerText = 'Не заполнено поле Name.';
+            } else if (regName.hasAttribute('pattern')) {
+                    var pattern = regName.getAttribute('pattern');
+                    var reg = new RegExp(pattern);
+                    if (!reg.test(regName.value)){
+                        let errItem = document.createElement('li');
+                        errItem.classList.add('err-item');
+                        mistake.appendChild(errItem); 
+                        errItem.innerText = 'Не верно заполнено поле Name.';
+                    }
+            }
         
-            // if (regMail.hasAttribute('required') && regMail.value === ''){
-            //     let errItem = document.createElement('li');
-            //     errItem.classList.add('err-item');
-            //     mistake.appendChild(errItem); 
-            //     errItem.innerText =  'Не заполненно поле e-mail.';
-            // } else if (regMail.hasAttribute('pattern')) {
-            //         var pattern = regMail.getAttribute('pattern');
-            //         var reg = new RegExp(pattern);
-            //         if (!reg.test(regMail.value.toUpperCase())){
-            //             let errItem = document.createElement('li');
-            //             errItem.classList.add('err-item');
-            //             mistake.appendChild(errItem); 
-            //             errItem.innerText = 'Не верно заполнено поле Email.';
-            //         }
-            // }
+            if (regMail.hasAttribute('required') && regMail.value === ''){
+                let errItem = document.createElement('li');
+                errItem.classList.add('err-item');
+                mistake.appendChild(errItem); 
+                errItem.innerText =  'Не заполненно поле e-mail.';
+            } else if (regMail.hasAttribute('pattern')) {
+                    var pattern = regMail.getAttribute('pattern');
+                    var reg = new RegExp(pattern);
+                    if (!reg.test(regMail.value.toUpperCase())){
+                        let errItem = document.createElement('li');
+                        errItem.classList.add('err-item');
+                        mistake.appendChild(errItem); 
+                        errItem.innerText = 'Не верно заполнено поле Email.';
+                    }
+            }
 
             if (regPass.hasAttribute('required') && regPass.value === '') {
                 let errItem = document.createElement('li');
@@ -500,21 +497,21 @@ function formReg(){
                 mistake.appendChild(errItem); 
                 errItem.innerText = 'Не заполненно поле Password.';
             } 
-            // else if (regPass.hasAttribute('pattern')) {
-            //         var pattern = regPass.getAttribute('pattern');
-            //         var reg = new RegExp(pattern);
-            //         if (!reg.test(regPass.value.toUpperCase())){
-            //             let errItem = document.createElement('li');
-            //             errItem.classList.add('err-item');
-            //             mistake.appendChild(errItem); 
-            //             errItem.innerText = 'Пароль может содержать только буквы и или цифры.';
-            //         }
-            // } else if ((regPass.value <2) || (regPass.value >8)){
-            //         let errItem = document.createElement('li');
-            //         errItem.classList.add('err-item');
-            //         mistake.appendChild(errItem); 
-            //         errItem.innerText = 'Пароль не должне быть меньше 2 символов и больше 8.';
-            // }
+            else if (regPass.hasAttribute('pattern')) {
+                    var pattern = regPass.getAttribute('pattern');
+                    var reg = new RegExp(pattern);
+                    if (!reg.test(regPass.value.toUpperCase())){
+                        let errItem = document.createElement('li');
+                        errItem.classList.add('err-item');
+                        mistake.appendChild(errItem); 
+                        errItem.innerText = 'Пароль может содержать только буквы и или цифры.';
+                    }
+            } else if ((regPass.value <2) || (regPass.value >8)){
+                    let errItem = document.createElement('li');
+                    errItem.classList.add('err-item');
+                    mistake.appendChild(errItem); 
+                    errItem.innerText = 'Пароль не должне быть меньше 2 символов и больше 8.';
+            }
 
             else if ((regPass.value <2) || (regPass.value >8)){
                     let errItem = document.createElement('li');
@@ -526,9 +523,9 @@ function formReg(){
 
 
 
-            // else {
-            //     regSubmit.submit();
-            // }
+            else {
+                regSubmit.submit();
+            }
 
     
 
@@ -536,8 +533,50 @@ function formReg(){
         // else if (e.target.tagName === 'BUTTON' && e.target.getAttribute('id') === 'reset') {}
             
 
-    });
+      });
 
 }
 
 formReg();
+
+
+
+var date = new Date();
+
+function St (name, group){
+        this.name = name;
+        this.group = group;
+        this.issues = [];
+}
+
+var st1 = new St('Вася', '1');
+var st2 = new St('Петя', '2');
+var st3 = new St('Ваня', '1');
+
+var students = [st1, st2, st3];
+
+
+
+function Issues(name, deadline) {
+        this.name = name,
+        this.deadline = deadline,
+        this.isComl = 'false',
+        this.mark = '0'
+}
+
+function addNewIssue(name, deadline) {
+
+    for (i=0; i<students.length; i++){
+        students.issues.push(new Issues(name, deadline))
+    }
+    }
+
+
+
+
+
+
+
+
+
+console.log(students);
