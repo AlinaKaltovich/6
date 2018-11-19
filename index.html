@@ -85,29 +85,28 @@
     
     <div class="wrap">
         <div class="item">
-            <a class="item-h" href="">1</a>
+            <p class="item-title">1</p>
             <div class="subitem hidden">
-                <p>zdjkbvkb</p>
-                <p>zdjkbvkb</p>
-                <p>zdjkbvkb</p>
-                <p>zdjkbvkb</p>
+                <a class="subitem-link" href="">arg</a>
+                <a class="subitem-link" href="">srthbn</a>
+                <a class="subitem-link" href="">srt</a>
             </div>
         </div>
         <div class="item">
-            <a class="item-h" href="">2</a>
+            <p class="item-title">2</p>
             <div class="subitem hidden">
-                <p>akrbvkarbabarbntn</p>
-                <p>akrbvkarbabarbntn</p>
-                <p>akrbvkarbabarbntn</p>
-                <p>akrbvkarbabarbntn</p>          
+                <a class="subitem-link" href="">azthh</a>
+                <a class="subitem-link" href="">3</a>
+                <a class="subitem-link" href="">zdhj</a>   
+                <a class="subitem-link" href="">3</a>     
             </div>
         </div>
         <div class="item">
-            <a class="item-h" href="">3</a>
-           <div class="subitem hidden">
-               <p>svguvbkb id egi</p>
-               <p>svguvbkb id egi</p>
-               <p>svguvbkb id egi</p>
+            <p class="item-title">3</p>
+            <div class="subitem hidden">
+                <a class="subitem-link" href="">adrhhrg</a>
+                <a class="subitem-link" href="">zh</a>
+                <a class="subitem-link" href="">s</a>
             </div>
         </div>
     </div>
@@ -134,18 +133,18 @@
     </div> 
    
     <h2>Формы</h2>
-    <div class="err"></div>
+    <ul class="err"></ul>
     <form action="" id="reg">
         <input type="text" id="reg-name" placeholder="Name" required pattern="[a-z A-Z]">
         <input type="text" id="reg-mail" placeholder="e-mail" required pattern="[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}">
-        <input type="password" id="reg-pass" placeholder="password" required>
-        <input type="password" id="reg-repeat-pass" placeholder="repeat your password" required>
+        <input type="password" id="reg-pass" placeholder="password" required minlength="2" maxlength="8" pattern="^[a-zA-Z0-9]+$">
+        <input type="password" id="reg-repeat-pass" placeholder="repeat your password" required minlength="2" maxlength="8">
         <input list="gender" id="genderr" placeholder="gender">
         <datalist id="gender">
             <option value="female">female</option>
             <option value="male">male</option>
         </datalist>
-        <input type="button" id="reg-bth" value="Submit">
+        <input type="button" id="reg-btn" value="Submit">
         <input type="reset" id="reset">
     </form>
 
